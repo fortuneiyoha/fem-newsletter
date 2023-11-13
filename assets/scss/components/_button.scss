@@ -1,0 +1,28 @@
+// --------------------------------------------------------------
+// This file contains all styles related to the button component.
+// --------------------------------------------------------------
+
+@use "../abstracts/" as *;
+
+.btn {
+  background: transparent;
+  border: 0.0625rem solid transparent;
+  cursor: pointer;
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-button);
+  font-weight: var(--fw-medium);
+  text-align: center;
+  text-decoration: none;
+  transition: var(--transition);
+
+  &-dark {
+    background-color: var(--clr-neutral-400);
+    color: var(--clr-neutral-100);
+    font-weight: var(--fw-bold);
+
+    &:is(:hover, :focus-visible) {
+      box-shadow: var(--shadow);
+      background-image: var(--gradient-accent);
+    }
+  }
+}

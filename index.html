@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <meta name="author" content="Fortune Iyoha">
+  <meta name="title" content="Frontend Mentor | Newsletter sign-up form with success message">
+  <meta name="description"
+    content="This is a solution to the Newsletter sign-up form with success message challenge on Frontend Mentor.">
+  <link rel="stylesheet" href="assets/css/style.min.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+
+<body>
+  <main class="newsletter js-newsletter">
+    <div id="newsletter-info-container">
+      <div class="grid">
+        <div class="column column-image">
+          <picture>
+            <source media="(min-width: 52.5em)" srcset="assets/images/illustration-sign-up-desktop.svg">
+            <img src="assets/images/illustration-sign-up-mobile.svg" alt="">
+          </picture>
+        </div>
+
+        <div class="column column-information">
+          <h1 class="newsletter-heading">Stay updated!</h1>
+          <p class="newsletter-lead">Join 60,000+ product managers receiving monthly updates on:</p>
+
+          <ul class="newsletter-list">
+            <li class="newsletter-item">Product discovery and building what matters</li>
+            <li class="newsletter-item">Measuring to ensure updates are a success</li>
+            <li class="newsletter-item">And much more!</li>
+          </ul>
+
+          <form action="" id="subscribe-form">
+            <fieldset class="subscribe-labels">
+              <label for="subscribe-input" class="subscribe-input-label">Email address</label>
+              <label class="subscribe-status js-subscribe-status">Valid email required</label>
+            </fieldset>
+
+            <fieldset class="subscribe-field">
+              <input type="text" id="subscribe-input" class="subscribe-input" placeholder="email@company.com" required>
+              <button type="submit" class="btn btn-dark js-btn-subscribe">Subscribe to monthly newsletter</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <template id="subscribe-info-container">
+    <div class="subscribe-info js-subscribe-info">
+      <img src="assets/images/icon-success.svg" alt="">
+      <h1 class="newsletter-heading">Thanks for subscribing!</h1>
+      <p class="newsletter-lead">A confirmation email has been sent to
+        <span class="subscribe-email js-subscribe-email"></span>.
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+      <button type="button" class="btn btn-dark js-btn-dismiss">Dismiss message</button>
+    </div>
+  </template>
+</body>
+
+</html>

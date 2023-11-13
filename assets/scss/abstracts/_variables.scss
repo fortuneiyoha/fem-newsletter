@@ -1,0 +1,125 @@
+// --------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// --------------------------------------------------------
+
+// Breakpoints
+//
+// 540x, 840px, 992px, 1200px, 1440px
+$breakpoint-up: (
+  "sm": "33.75em",
+  "md": "52.5em",
+  "lg": "62em",
+  "xl": "75em",
+  "xxl": "90em",
+);
+
+// 539.84px, 839.84px, 991.84px, 1199.84px, 1439.84px
+$breakpoint-down: (
+  "sm": "33.74em",
+  "md": "52.49em",
+  "lg": "61.99em",
+  "xl": "74.99em",
+  "xxl": "89.99em",
+);
+
+///
+/// Colors
+///
+/// colors map, contains all colors of the site
+/// @access public
+/// @type Map
+/// @prop {String} key - color name
+/// @prop {Map} shade - shade map
+/// @prop {Number} value - shade value mapped to the key
+$colors: (
+  "primary": (
+    100: hsl(4, 100%, 67%),
+  ),
+  "neutral": (
+    100: hsl(0, 0%, 100%),
+    200: hsl(231, 7%, 60%),
+    300: hsl(235, 18%, 26%),
+    400: hsl(234, 29%, 20%),
+  ),
+  "accent": (
+    1: hsl(4, 100%, 67%),
+    2: hsl(346, 100%, 66%),
+  ),
+);
+
+// Gradient
+$gradient-accent: linear-gradient(
+  to left,
+  var(--clr-accent-1),
+  var(--clr-accent-2)
+);
+
+//
+// Font
+//
+// Font Family
+$ff-primary: "Roboto", sans-serif;
+
+$ff-body: var(--ff-primary);
+$ff-lead: var(--ff-primary);
+
+/// Font Sizes
+/// font-sizes map, contains all font sizes of text
+/// size based on heading levels `h1-h6`
+/// @access public
+/// @type Map
+/// @prop {String} key - size name
+/// @prop {Number} value - size value mapped to the key
+$font-sizes: (
+  100: 0.25rem,
+  200: 0.5rem,
+  300: 0.75rem,
+  400: 1rem,
+  500: 1.5rem,
+  600: 1.75rem,
+  700: 2rem,
+  800: 2.5rem,
+  900: 3rem,
+);
+
+$fs-body: var(--fs-400);
+$fs-primary-heading: var(--fs-900);
+$fs-secondary-heading: var(--fs-700);
+$fs-lead: var(--fs-400);
+$fs-button: var(--fs-400);
+
+/// Font Weight
+/// font-weights map, contains all font weight of text
+/// @access public
+/// @type Map
+/// @prop {String} key - weight name
+/// @prop {Number} value - weight value mapped to the key
+$font-weights: (
+  "regular": 400,
+  "bold": 700,
+);
+
+///
+/// Spacing
+///
+/// spacers map, contains all spacer value of the site
+/// @access public
+/// @type Map
+/// @prop {String} key - spacer number
+/// @prop {Number} value - spacer value mapped to the key
+$spacer: 1rem;
+$spacers: (
+  100: 0.25rem,
+  200: 0.5rem,
+  300: 0.75rem,
+  400: 1rem,
+  500: 1.5rem,
+  600: 2rem,
+  700: 3rem,
+  800: 4rem,
+  900: 5rem,
+);
+
+$gap: 1rem;
+$transition: all 200ms linear;
+$shadow: 0 0.8rem 1rem hsla(346, 100%, 66%, 0.5);

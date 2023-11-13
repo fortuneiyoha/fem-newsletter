@@ -1,0 +1,53 @@
+// ------------------------------------------------------
+// This file contains all application-wide CSS variables.
+// ------------------------------------------------------
+
+@use "../abstracts/" as *;
+
+:root {
+  //
+  // Colors
+  //
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+
+  // Gradient
+  --gradient-accent: #{$gradient-accent};
+
+  //
+  // Font
+  //
+  --ff-primary: #{inspect($ff-primary)};
+
+  --ff-body: #{$ff-body};
+  --ff-lead: #{$ff-lead};
+
+  // Font Sizes
+  @each $size, $value in $font-sizes {
+    --fs-#{$size}: #{$value};
+  }
+
+  --fs-body: #{$fs-body};
+  --fs-primary-heading: #{$fs-primary-heading};
+  --fs-lead: #{$fs-lead};
+  --fs-button: #{$fs-button};
+
+  // Font Weights
+  @each $weight, $value in $font-weights {
+    --fw-#{$weight}: #{$value};
+  }
+
+  //
+  // Spacers
+  //
+  @each $spacer, $value in $spacers {
+    --spacer-#{$spacer}: #{$value};
+  }
+
+  --gap: #{$gap};
+  --transition: #{$transition};
+  --shadow: #{$shadow};
+}

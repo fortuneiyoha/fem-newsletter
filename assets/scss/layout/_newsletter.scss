@@ -1,0 +1,182 @@
+// --------------------------------------------------------------------
+// This file contains all styles related to the newsletter of the site.
+// --------------------------------------------------------------------
+
+@use "../abstracts/" as *;
+
+.newsletter {
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-neutral-300);
+  overflow: hidden;
+
+  @include breakpoint-up(md) {
+    border-radius: var(--spacer-500);
+    max-width: 53.125rem; // 850px
+    padding: var(--spacer-400);
+  }
+
+  @include breakpoint-down(md) {
+    min-height: 100vh; // fallback for devices with no support for (dvh)
+    min-height: 100dvh;
+    min-width: 100vw; // fallback for devices with no support for (dvw)
+    min-width: 100dvw;
+    padding-block-end: var(--spacer-500);
+  }
+
+  .grid {
+    place-items: center;
+
+    .column:first-of-type {
+      @include breakpoint-up(md) {
+        order: 2;
+      }
+    }
+  }
+}
+
+.column-information {
+  max-width: 25.9375rem;
+  padding-inline: var(--spacer-400);
+
+  @include breakpoint-up(md) {
+    padding-inline: var(--spacer-300);
+  }
+}
+
+.newsletter-heading {
+  font-size: var(--fs-900);
+  line-height: 1;
+  margin-block-end: var(--spacer-400);
+}
+
+.newsletter-heading,
+.newsletter-lead {
+  margin-block-end: var(--spacer-400);
+}
+
+.newsletter-list {
+  margin-block-end: var(--spacer-600);
+}
+
+.newsletter-item {
+  --gap: 0.5rem;
+  @include flex(flex-start, flex-start);
+  gap: var(--gap);
+
+  &::before {
+    content: url(../images/icon-list.svg);
+    border-radius: 50%;
+    display: inline-block;
+    aspect-ratio: 1/1;
+    margin-block-start: 0.15rem;
+    min-width: 1.3125rem;
+    overflow: hidden;
+  }
+
+  &:not(:last-of-type) {
+    margin-block-end: var(--spacer-300);
+  }
+}
+
+.subscribe-labels {
+  @include flex(space-between, center);
+  font-size: var(--fs-300);
+  font-weight: var(--fw-bold);
+  margin-block-end: var(--spacer-300);
+}
+
+.subscribe-status {
+  opacity: 0;
+}
+
+.subscribe-status.error {
+  color: var(--clr-primary-100);
+  opacity: 1;
+}
+
+.subscribe-field {
+  --gap: 1.5rem;
+  @include flex(space-between, center);
+  flex-flow: column nowrap;
+  gap: var(--gap);
+}
+
+.subscribe-input,
+.btn-dark {
+  border-radius: var(--spacer-200);
+  padding-block: var(--spacer-300);
+}
+
+.subscribe-input {
+  border: 0.0625rem solid var(--clr-neutral-200);
+  padding-inline-start: var(--spacer-500);
+  position: relative;
+
+  &.error {
+    border: 0.0625rem solid var(--clr-primary-100);
+    color: var(--clr-primary-100);
+    background-color: hsl(4, 100%, 67%, 0.08);
+    animation: inputError 150ms linear 0s 3;
+
+    &::placeholder {
+      color: inherit;
+    }
+
+    &:focus-visible {
+      border: 0.0625rem solid var(--clr-primary-100);
+    }
+  }
+
+  &:focus-visible {
+    border: 0.0625rem solid var(--clr-neutral-400);
+  }
+}
+
+// SUBSCRIPTION INFORMATION
+.subscribe-info {
+  --gap: 1.5rem;
+  @include flex(flex-start, flex-start);
+  flex-flow: column nowrap;
+  gap: var(--gap);
+  margin-inline: auto;
+  max-width: 25.625rem; // 410px
+  padding: var(--spacer-200);
+
+  > * {
+    margin: initial;
+  }
+
+  @include breakpoint-up(md) {
+    @include flex(space-between, flex-start);
+    padding: var(--spacer-500);
+  }
+
+  @include breakpoint-down(md) {
+    margin-block-start: 20%;
+    max-height: 100%;
+
+    .btn-dark {
+      margin-block-start: 20vh;
+    }
+  }
+}
+
+.subscribe-email {
+  font-weight: var(--fw-bold);
+}
+
+// ANIMATION FOR INPUT ERROR IF WRONG EMAIL IS TYPED
+@keyframes inputError {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(3%);
+  }
+  50% {
+    transform: translateX(-3%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

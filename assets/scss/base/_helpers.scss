@@ -1,0 +1,35 @@
+// --------------------------------------
+// This file contains CSS helper classes.
+// --------------------------------------
+
+@use "../abstracts/" as *;
+
+//
+// ┌────────────────────────────────────────────────────────┐
+// │                 Hidden Element Classes                 │
+// └────────────────────────────────────────────────────────┘
+//
+
+// Hide element while making it readable for screen readers
+.visually-hidden {
+  @include visually-hidden;
+
+  &-focusable:not(:focus):not(:focus-within) {
+    @extend .visually-hidden;
+  }
+}
+
+//
+// ┌────────────────────────────────────────────────────────┐
+// │                       Text Classes                     │
+// └────────────────────────────────────────────────────────┘
+//
+
+//
+// Semantic
+//
+// Apply styles to description text
+.lead {
+  font-size: var(--fs-lead);
+  font-weight: var(--fw-regular);
+}
