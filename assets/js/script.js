@@ -27,6 +27,14 @@ emailForm.addEventListener("submit", (e) => {
   }
 });
 
+function removeSubscriptionStatus(){
+  if(subscribeStatus.classList.contains("error")){
+     emailInput.classList.remove("error");
+    subscribeStatus.classList.remove("error")
+    subscribeInfo.style.display = "none"
+  }
+}
+
 // ! Fix dismiss button event to hide subscription info container
 dismissBtn.addEventListener("click", () => {
   newsletterInfo.style.display = "block";
