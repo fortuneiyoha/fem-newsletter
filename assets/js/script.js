@@ -11,6 +11,13 @@ const subscribeInfo = document.importNode(subscribeInfoTemplate, true);
 const subscribeEmail = subscribeInfo.querySelector(".js-subscribe-email");
 const dismissBtn = subscribeInfo.querySelector(".js-btn-dismiss");
 
+emailInput.addEventListener("keydown", () => {
+  if (subscribeStatus.classList.contains("error")) {
+    emailInput.classList.remove("error");
+    subscribeStatus.classList.remove("error");
+  }
+});
+
 emailForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
