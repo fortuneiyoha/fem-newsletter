@@ -21,7 +21,12 @@ emailForm.addEventListener("submit", (e) => {
     newsletterInfo.style.display = "none";
     newsletter.appendChild(subscribeInfo);
     subscribeEmail.textContent = inputValue;
-  } else {
+  }
+  else if(subscribeStatus.classList.contains("error")){
+    subscribeInfo.style.display = "none";
+  }
+    
+  else {
     emailInput.classList.add("error");
     subscribeStatus.classList.add("error");
   }
