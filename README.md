@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- **Solution:** [Frontend Mentor: Newsletter sign-up form with success message](https://www.frontendmentor.io/solutions/)
-- **Live Site:** [https://link_to_site](https://link_to_site)
+- **Solution:** [Frontend Mentor: Newsletter sign-up form with success message](https://www.frontendmentor.io/solutions/newsletter-signup-form-with-success-message-pr0CNTHdNF)
+- **Live Site:** [https://fem-newsletter.pages.dev/](https://fem-newsletter.pages.dev/)
 
 ## Author
 
