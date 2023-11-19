@@ -16,7 +16,8 @@
 
 <body>
   <main class="newsletter js-newsletter">
-    <div id="newsletter-info-container">
+    <!-- NEWSLETTER INFORMATION -->
+    <div class="newsletter-info-container js-newsletter-info-container">
       <div class="grid">
         <div class="column column-image">
           <picture>
@@ -26,7 +27,7 @@
         </div>
 
         <div class="column column-information">
-          <h1 class="newsletter-heading">Stay updated!</h1>
+          <h2 class="newsletter-heading">Stay updated!</h2>
           <p class="newsletter-lead">Join 60,000+ product managers receiving monthly updates on:</p>
 
           <ul class="newsletter-list">
@@ -35,7 +36,7 @@
             <li class="newsletter-item">And much more!</li>
           </ul>
 
-          <form action="" id="subscribe-form">
+          <form id="subscribe-form">
             <fieldset class="subscribe-labels">
               <label for="subscribe-input" class="subscribe-input-label">Email address</label>
               <label class="subscribe-status js-subscribe-status">Valid email required</label>
@@ -49,19 +50,20 @@
         </div>
       </div>
     </div>
-  </main>
 
-  <template id="subscribe-info-container">
-    <div class="subscribe-info js-subscribe-info">
-      <img src="assets/images/icon-success.svg" alt="">
-      <h1 class="newsletter-heading">Thanks for subscribing!</h1>
-      <p class="newsletter-lead">A confirmation email has been sent to
-        <span class="subscribe-email js-subscribe-email"></span>.
-        Please open it and click the button inside to confirm your subscription.
-      </p>
-      <button type="button" class="btn btn-dark js-btn-dismiss">Dismiss message</button>
+    <!-- SUBSCRIPTION INFORMATION -->
+    <div class="subscribe-info-container js-subscribe-info-container">
+      <div class="subscribe-info js-subscribe-info">
+        <img src="assets/images/icon-success.svg" alt="">
+        <h2 class="newsletter-heading">Thanks for subscribing!</h2>
+        <p class="newsletter-lead">A confirmation email has been sent to
+          <span class="subscribe-email js-subscribe-email"></span>.
+          Please open it and click the button inside to confirm your subscription.
+        </p>
+        <button type="button" class="btn btn-dark js-btn-dismiss">Dismiss message</button>
+      </div>
     </div>
-  </template>
+  </main>
 </body>
 
 </html>

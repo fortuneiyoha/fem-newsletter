@@ -26,11 +26,11 @@ Users should be able to:
 
 ### Screenshot
 
-![website preview](screenshots/newsletter.png)
+![website preview](screenshots/newsletter-desktop.png)
 
 ### Links
 
-- **Solution:** [Frontend Mentor: ...](https://www.frontendmentor.io/solutions/)
+- **Solution:** [Frontend Mentor: Newsletter sign-up form with success message](https://www.frontendmentor.io/solutions/)
 - **Live Site:** [https://link_to_site](https://link_to_site)
 
 ## Author

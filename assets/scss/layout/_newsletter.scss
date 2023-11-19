@@ -133,6 +133,10 @@
 }
 
 // SUBSCRIPTION INFORMATION
+.subscribe-info-container {
+  display: none;
+}
+
 .subscribe-info {
   --gap: 1.5rem;
   @include flex(flex-start, flex-start);

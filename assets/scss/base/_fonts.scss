@@ -2,17 +2,17 @@
 // This file contains all @font-face declarations.
 // -----------------------------------------------
 
-// Overpass
+// Roboto
 @font-face {
   font-family: "Roboto";
   font-weight: 400;
   font-display: swap;
-  src: url(../fonts/roboto/roboto-regular.ttf) /* format("woff") */;
+  src: url(../fonts/roboto/roboto-regular.woff) format("woff");
 }
 
 @font-face {
   font-family: "Roboto";
   font-weight: 700;
   font-display: swap;
-  src: url(../fonts/roboto/roboto-bold.ttf) /* format("woff") */;
+  src: url(../fonts/roboto/roboto-bold.woff) format("woff");
 }
